@@ -16,7 +16,7 @@ A meeting notification applet for WeChat，一个微信平台会议通知小程�
   * 帮助页面
 #### 界面展示
 .<img src="https://github.com/xiemomoioio/NPUMEETING/blob/master/miniprogram/imgs/help/create1.jpg" width="20%" height="20%"/>
-.<img src="https://github.com/xiemomoioio/NPUMEETING/blob/master/miniprogram/imgs/help/join1.jpg" width="20%" height="20%"/>
+.<img src="https://github.com/xiemomoioio/NPUMEETING/blob/master/miniprogram/imgs/help/editname1.jpg" width="20%" height="20%"/>
 .<img src="https://github.com/xiemomoioio/NPUMEETING/blob/master/miniprogram/imgs/help/editname2.jpg" width="20%" height="20%"/>
 .<img src="https://github.com/xiemomoioio/NPUMEETING/blob/master/miniprogram/imgs/help/share1.jpg" width="20%" height="20%"/>
 #### Todo...
