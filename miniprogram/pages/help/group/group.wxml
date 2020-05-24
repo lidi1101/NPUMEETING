@@ -1,0 +1,27 @@
+<view>
+ 
+  <view style='color:gray;padding:40rpx 0;text-align:center;font-size:40rpx'>
+   分享会议与群会议
+  </view>
+
+  <view class="step">
+    Step 1
+  </view>
+
+  <view class="text">
+    进入会议页面，点击【分享会议】按钮，即可将会议分享给其他人。
+  </view>
+  <image class="img" src='/imgs/help/share1.jpg' mode="widthFix" ></image>
+  
+
+  <view class="step">
+    Step 2
+  </view>
+
+  <view class="text">
+    若分享在微信群中，则通过微信群点击会议后，该会议将被显示在【群会议】栏目下。
+  </view>
+  <image class="img" src='/imgs/help/group1.jpg' mode="widthFix" ></image>
+  
+  
+</view>

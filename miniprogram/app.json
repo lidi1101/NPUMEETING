@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/link/index/index",
+    "pages/link/create/create",
+    "pages/link/enroll/enroll",
+    "pages/link/edit/edit",
+    "pages/help/smart/smart",
+    "pages/help/create/create",
+    "pages/help/edit/edit",
+    "pages/help/editname/editname",
+    "pages/help/join/join",
+    "pages/help/group/group",
+    "pages/help/quit/quit"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#479AC7",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "日常工具",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": false
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用户手动选择地理位置"
+    }
+  }
+}

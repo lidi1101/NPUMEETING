@@ -1,0 +1,45 @@
+<view>
+ 
+  <view style='color:gray;padding:40rpx 0;text-align:center;font-size:40rpx'>
+    如何创建会议
+  </view>
+
+  <view class="step">
+    Step 1
+  </view>
+
+  <view class="text">
+    进入小程序，点击页面下方【创建会议】按钮。
+  </view>
+  <image class="img" src='/imgs/help/create1.jpg' mode="widthFix" ></image>
+  
+
+  <view class="step">
+    Step 2
+  </view>
+
+  <view class="text">
+    按照页面提示填写相应信息。
+  </view>
+  
+  <image class="img" src='/imgs/help/create3.jpg' mode="widthFix" ></image>
+  <view class="note">
+    <text>
+      注:
+        i.会议标题为必填内容，其他内容为选填
+        ii.会议开始时间必须在当前时间十分钟之后
+        iii.智能解析模块详情可查看【帮助-关于智能解析】
+    </text>
+  </view>
+  
+
+  <view class="step">
+    Step 3
+  </view>
+  
+  <view class="text">
+    再次点击页面下方【创建会议】按钮即可创建。
+  </view>
+  <image class="img" src='/imgs/help/create3.jpg' mode="widthFix" ></image>
+  
+</view>

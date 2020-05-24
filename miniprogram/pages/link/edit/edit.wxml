@@ -1,0 +1,48 @@
+<view>
+  <view class='title'>会议标题:
+    <text style='color:red;'>(必填)</text> </view>
+  <input value='{{title}}' bindinput='bindTitleInput' maxlength='32' focus='true'></input>
+  <view class='title'>会议时间:</view>
+  <view class='select-time'>
+    <picker mode="date" value="{{date}}" bindchange="bindDateChange" >
+      <view class="picker">
+        日 期: {{date}}
+      </view>
+    </picker>
+    <picker mode="time" value="{{time}}" bindchange="bindTimeChange" style='padding-left: 100rpx;'>
+      <view class="picker">
+        时 间: {{time}}
+      </view>
+    </picker>
+  </view>
+  <view class='title'>地址:</view>
+  <view class='location'>
+    <input style='width:73%;' value='{{address}}' bindinput='bindAddressInput'></input>
+    <view bindtap='getMap'>
+      <image src='../../../imgs/location.svg' style='width:20px;'></image>
+      地图
+    </view>
+  </view>
+  <view class='title'>参与人数:</view>
+  <input value='{{peopleNumber}}' bindinput='bindNumberInput' maxlength='4' type="number"></input>
+  <view class="body-view">
+    <view class='title'>是否公开参与人:</view>
+    <switch bindchange="switchChange" type="checkbox" style="margin: 5px 10px;" />
+  </view>
+  <view class='title'>发起人:</view>
+  <view class='creater'>
+    <!-- <view style='border-bottom:1px solid #ccc;'>姓 名: -->
+      <input value='{{name}}' bindinput='bindNameInput'></input>
+    <!-- </view>
+    <view>联系方式:
+      <input value='{{tel}}' bindinput='bindTelInput' type='number'></input>
+    </view> -->
+  </view>
+  <view class='title'>备注:</view>
+  <textarea auto-height value='{{remark}}' bindblur='bindRemarkInput' />
+
+  <view class='title'>智能信息解析:</view>
+  <textarea auto-focus="true" maxlength="-1" cursor-spacing="90" placeholder="目前支持【腾讯会议】数据解析"  value='{{jiexi}}' bindconfirm="bindJiexiConfirm" style="overflow-y:auto;overflow-x:scroll;" />
+
+  <button class='ok' bindtap='ok'>确认修改</button>
+</view>

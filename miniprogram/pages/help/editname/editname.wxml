@@ -1,0 +1,17 @@
+<view>
+ 
+  <view style='color:gray;padding:40rpx 0;text-align:center;font-size:40rpx'>
+    如何修改报名信息
+  </view>
+
+  <view class="step">
+    Step 1
+  </view>
+
+  <view class="text">
+    进入会议页面，点击页面下方【修改报名信息】按钮即可。
+  </view>
+  <image class="img" src='/imgs/help/editname1.jpg' mode="widthFix" ></image>
+  
+
+</view>

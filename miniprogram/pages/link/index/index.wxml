@@ -1,0 +1,173 @@
+<view>
+  <view class='tab' style="height:{{statusBarHeight}}px;line-height:{{statusBarHeight}}px;">
+    <view class="{{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">我参加的</view>
+    <view class="{{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">我创建的</view>
+    <view class="{{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">群会议</view>
+    <view class="{{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">帮助</view>
+  </view>
+  <scroll-view scroll-y="true" style="height: {{scrollHeight}}px;" scroll-top="{{scrollTop}}">
+    
+    <view wx:if='{{currentTab==0}}'>
+      <view class='app-my-list'>
+        <view class='app-list-l'>
+          <image src='/imgs/soon.jpg'></image>
+          <text>即将开始</text>
+        </view>
+      </view>
+      <view wx:for="{{joinData}}" wx:if='{{item.taskType==0}}' wx:key="key" data-taskid="{{item.taskid}}" bindtap='gotoEnroll' class='item'>
+        <view style='font-weight:bold;'>
+          {{item.title}}
+        </view>
+        <text style='font-size:26rpx;color:#666;'>{{item.date}} {{item.time}}</text>
+      </view>
+
+
+      <view class='app-my-list'>
+        <view class='app-list-l'>
+          <image src='/imgs/future.jpg'></image>
+          <text>未开始</text>
+        </view>
+      </view>
+      <view wx:for="{{joinData}}" wx:if='{{item.taskType==1}}' wx:key="key" data-taskid="{{item.taskid}}" bindtap='gotoEnroll' class='item'>
+        <view style='font-weight:bold;'>
+          {{item.title}}
+        </view>
+        <text style='font-size:26rpx;color:#666;'>{{item.date}} {{item.time}}</text>
+      </view>
+
+
+      <view class='app-my-list'>
+        <view class='app-list-l'>
+          <image src='/imgs/past.jpg'></image>
+          <text>已开始</text>
+        </view>
+      </view>
+      <view wx:for="{{joinData}}" wx:if='{{item.taskType==2}}' wx:key="key" data-taskid="{{item.taskid}}" bindtap='gotoEnroll' class='item'>
+        <view style='font-weight:bold;'>
+          {{item.title}}
+        </view>
+        <text style='font-size:26rpx;color:#666;'>{{item.date}} {{item.time}}</text>
+      </view>
+      <view direction="all" class='creat' bindtap='creat'>
+        创建会议
+      </view>
+    </view>
+
+
+    <view wx:if='{{currentTab==1}}'>
+      <view class='app-my-list'>
+        <view class='app-list-l'>
+          <image src='/imgs/soon.jpg'></image>
+          <text>即将开始</text>
+        </view>
+      </view>
+      <view wx:for="{{createData}}" wx:if='{{item.taskType==0}}' wx:key="key" data-taskid="{{item.taskid}}" bindtap='gotoEnroll' class='item'>
+        <view style='font-weight:bold;'>
+          {{item.title}}
+        </view>
+        <text style='font-size:26rpx;color:#666;'>{{item.date}} {{item.time}}</text>
+      </view>
+
+      <view class='app-my-list'>
+        <view class='app-list-l'>
+          <image src='/imgs/future.jpg'></image>
+          <text>未开始</text>
+        </view>
+      </view>
+      <view wx:for="{{createData}}" wx:if='{{item.taskType==1}}' wx:key="key" data-taskid="{{item.taskid}}" bindtap='gotoEnroll' class='item'>
+        <view style='font-weight:bold;'>
+          {{item.title}}
+        </view>
+        <text style='font-size:26rpx;color:#666;'>{{item.date}} {{item.time}}</text>
+      </view>
+
+      <view class='app-my-list'>
+        <view class='app-list-l'>
+          <image src='/imgs/past.jpg'></image>
+          <text>已开始</text>
+        </view>
+      </view>
+      <view wx:for="{{createData}}" wx:if='{{item.taskType==2}}' wx:key="key" data-taskid="{{item.taskid}}" bindtap='gotoEnroll' class='item'>
+        <view style='font-weight:bold;'>
+          {{item.title}}
+        </view>
+        <text style='font-size:26rpx;color:#666;'>{{item.date}} {{item.time}}</text>
+      </view>
+      <view direction="all" class='creat' bindtap='creat'>
+        创建会议
+      </view>
+    </view>
+
+
+
+    <view wx:if='{{currentTab==2}}'>
+      <view wx:if='{{groupData=="" && enterGId==""}}' style='color:gray;padding:40rpx 0;text-align:center;'>
+        从群内打开该小程序才能查看到群会议
+      </view>
+      <view wx:elif='{{groupData=="" && enterGId!=""}}' style='color:gray;padding:40rpx 0;text-align:center;'>
+        群内暂时没有群会议消息
+      </view>
+      <view wx:for="{{groupData}}" wx:key="key" data-taskid="{{item.taskid}}" bindtap='gotoEnroll' class='item'>
+        <view style='font-weight:bold;'>
+          {{item.title}}
+        </view>
+        <text style='font-size:26rpx;color:#666;'>{{item.date}} {{item.time}}</text>
+      </view>
+      <view direction="all" class='creat' bindtap='creat'>
+        创建会议
+      </view>
+    </view>
+
+
+    <view wx:if='{{currentTab==3}}'>
+      <block wx:for-items="{{list}}" wx:key="{{item.id}}">
+        <view class="kind-list-item">
+          <view id="{{item.id}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}" bindtap="kindToggle">
+            <view class="kind-list-text">{{item.name}}</view>
+          </view>
+
+          <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
+            <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
+
+              <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="*item">
+                <!-- <navigator url="pages/help/{{item.pages_name[index]}}/{{item.pages_name[index]}}" class="navigator"> -->
+                <view class="navigator" bindtap="gotohelp" id="{{item.pages_name[index]}}">
+                  <view class="navigator-text">{{page}}</view>
+                  <view class="navigator-arrow"></view>
+                <!-- </navigator> -->
+                </view>
+              </block>
+            </view>
+          </view>
+
+        </view>
+      </block>
+
+
+
+      <block wx:key='content'>
+        <view class="kind-list-item">
+          <view id='content' class="kind-list-item-hd {{SeeYiJianFlag ? 'kind-list-item-hd-show' : ''}}" bindtap="kindToggle2">
+            <view class="kind-list-text">意见反馈</view>
+          </view>
+
+          <view wx:if='{{SeeYiJianFlag==true}}'>
+            <textarea class="kind-list-item-bd" auto-focus="true" maxlength="-1" cursor-spacing="90" placeholder="请输入意见建议..." value='{{yijian}}' bindinput="bindYiJianConfirm" style="overflow-y:auto;overflow-x:scroll;height:180rpx;padding-left:30rpx" />
+            <button class='ok' bindtap='sendYiJianConfirm'>确认反馈</button>
+          </view>
+
+        </view>
+      </block>
+
+
+
+
+
+
+
+
+    </view>
+
+  </scroll-view>
+
+</view>

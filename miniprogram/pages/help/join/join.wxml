@@ -1,0 +1,26 @@
+<view>
+ 
+  <view style='color:gray;padding:40rpx 0;text-align:center;font-size:40rpx'>
+    如何报名会议
+  </view>
+
+  <view class="step">
+    Step 1
+  </view>
+
+  <view class="text">
+    进入会议页面，点击页面下方【立即报名】按钮。
+  </view>
+  <image class="img" src='/imgs/help/join1.jpg' mode="widthFix" ></image>
+
+  <view class="step">
+    Step 2
+  </view>
+
+  <view class="text">
+    填写报名信息并点击【确认】。
+  </view>
+  <image class="img" src='/imgs/help/join2.jpg' mode="widthFix" ></image>
+  
+
+</view>

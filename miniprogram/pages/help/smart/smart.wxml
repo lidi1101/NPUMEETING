@@ -1,0 +1,49 @@
+<view>
+ 
+  <view style='color:gray;padding:40rpx 0;text-align:center;font-size:40rpx'>
+    关于智能解析
+  </view>
+
+  <view class="step">
+    Step 1
+  </view>
+
+  <view class="text">
+    复制其他APP的消息通知到智能解析框。
+  </view>
+  
+  
+
+  <view class="step">
+    Step 2 【！！！重要！！！】
+  </view>
+
+  <view class="text">
+    点击键盘上的【完成】按钮即可解析。
+  </view>
+
+  <image class="img" src='/imgs/help/smart1.jpg' mode="widthFix" ></image>
+  
+  <image class="img" src='/imgs/help/smart2.jpg' mode="widthFix" ></image>
+  <view class="note">
+    <text>
+      注:
+        i.目前支持【腾讯会议】消息通知智能解析，其他应用逐步上线中...
+    </text>
+  </view>
+
+  <text>
+  \n
+  </text>
+  
+
+  <view class="step">
+    消息通知格式
+  </view>
+  
+  <view class="text">
+    i.腾讯会议
+  </view>
+  <image class="img" src='/imgs/help/smart3.jpg' mode="widthFix" ></image>
+  
+</view>

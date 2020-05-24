@@ -1,0 +1,24 @@
+<view>
+ 
+  <view style='color:gray;padding:40rpx 0;text-align:center;font-size:40rpx'>
+    如何删除或修改会议
+  </view>
+
+  <view class="step">
+    Step 1
+  </view>
+
+  <view class="text">
+    进入会议页面，分别点击相应的绿色按钮即可。
+  </view>
+  <image class="img" src='/imgs/help/del1.jpg' mode="widthFix" ></image>
+  
+  <view class="note">
+    <text>
+      注:
+        i.只有会议的创建者可删除或修改会议
+    </text>
+  </view>
+  
+
+</view>

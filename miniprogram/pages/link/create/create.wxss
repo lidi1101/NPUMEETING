@@ -1,0 +1,96 @@
+view{
+  font-size: 34rpx;
+}
+input{
+  background: #fff;
+  padding: 0 30rpx;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.title{
+  color:#666;
+  padding: 0 30rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.select-time{
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  padding-left: 30rpx;
+  display: flex;
+}
+.select-time view{
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.location{
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding: 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.location input{
+  background: transparent;
+  padding: 0;
+  padding-left: 30rpx;
+  border:none;
+}
+.location view{
+  background: transparent;
+  padding: 0;
+  border:none;
+  width:23%;
+  text-align: center;
+  border-left: 2rpx solid #ccc;
+  height: 100%;
+  
+}
+.creater{
+  /* border-top: 1px solid rgb(231, 35, 35);
+  border-bottom: 1px solid rgb(236, 51, 51); */
+  /* padding-left:30rpx; */
+  background: #fff;
+}
+.creater view{
+  display: flex;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.creater view input{
+  border:none !important;
+}
+
+textarea{
+  box-sizing: content-box;
+  width: 96%;
+  background: #fff;
+  padding:10rpx;
+  padding-left:30rpx;
+  padding-right:30rpx;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  max-height:180rpx;
+}
+.ok{
+  background: #479AC7;
+  color: #fff;
+  width: 80%;
+  margin-top: 30rpx;
+  letter-spacing: 4rpx;
+}
+
+.body-view{
+  color: #333;
+  height: 100rpx;
+  line-height: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20rpx;
+}
